@@ -3,7 +3,20 @@
 
     --background-color: #2B0996;
     --main-color: #532DCD;
+
+    --footer-color: #232323;
 }
+
+@media (max-width: 767px) {
+    html {
+        font-size: calc(16px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+    }
+}
+
+html {
+    font-size: calc(16px + 8 * (100vw / 1280));
+}
+
 
 
 html, body {
@@ -12,15 +25,35 @@ html, body {
     background-color: var(--background-color);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 header, main, footer {
     background-color: var(--main-color);
     padding: 0px;
     margin: 0px;
-    /* width: 100vw; */
+    color: white;
 }
 
 header {
+    flex: 0 0 50px;
     background-color: var(--header-color);
     position: sticky;
     top: 0px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+
+main {
+    flex-grow: 3;
+}
+
+footer {
+    background-color: var(--footer-color);
+    min-height: 100px;
+    flex: 0 0 auto;
 }
