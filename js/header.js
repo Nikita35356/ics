@@ -1,1 +1,0 @@
-document.body.innerHTML += `<header id="header">gg</header>`
