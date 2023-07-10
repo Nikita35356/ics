@@ -1,0 +1,26 @@
+:root {
+    --header-color: #7108B3;
+
+    --background-color: #2B0996;
+    --main-color: #532DCD;
+}
+
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--background-color);
+}
+
+header, main, footer {
+    background-color: var(--main-color);
+    padding: 0px;
+    margin: 0px;
+    /* width: 100vw; */
+}
+
+header {
+    background-color: var(--header-color);
+    position: sticky;
+    top: 0px;
+}
