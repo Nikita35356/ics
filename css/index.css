@@ -4,6 +4,9 @@
     --background-color: #2B0996;
     --main-color: #532DCD;
 
+    --link-color: #FFD300;
+    --link-hover: #FFDF45;
+
     --footer-color: #232323;
 }
 
@@ -45,15 +48,52 @@ header {
     top: 0px;
     height: 50px;
     margin-bottom: 20px;
+    display: flex;
 }
+
+header>*:not(.icon) {
+    padding: calc(25px - 0.5rem) 2.5px;
+
+    margin-left: 5px;
+    
+}
+
+header>div:hover {
+    color: var(--link-hover);
+    border-bottom: #FFD300 solid 1px;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    background-color: var(--footer-color);
+    border-radius: 10%;
+    position: relative;
+    box-shadow: inset -3px 3px 3px #a0a, inset 3px -3px 3px #0aa;
+}
+
 
 
 main {
     flex-grow: 3;
 }
 
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
 footer {
     background-color: var(--footer-color);
-    min-height: 100px;
+    min-height: 50px;
     flex: 0 0 auto;
 }
